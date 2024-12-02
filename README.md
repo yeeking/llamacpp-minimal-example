@@ -19,7 +19,7 @@ git clone git@github.com:ggerganov/llama.cpp.git
 cmake -B build .
 
 # build
-cmake --build --config Debug build  -j 10 # number of threads to use
+cmake --build build --config Debug   -j 10 # number of threads to use
 
 # run
 ./build/myk-llama
