@@ -16,7 +16,7 @@ git clone git@github.com:yeeking/llamacpp-minimal-example.git
 cd llamacpp-minimal-example
 
 # clone llama cpp
-git clone git@github.com:ggerganov/llama.cpp.git
+git clone git@github.com:ggml-org/llama.cpp.git
 
 # generate the project
 # dynamic linking - you probably don't want this as the binary will be less portable to others' computers
@@ -28,7 +28,8 @@ cmake -B build -DBUILD_SHARED_LIBS=OFF .
 cmake --build build --config Debug   -j 10 # number of threads to use
 
 # run with the example supertiny model (which is untrained and just for testing)
-./build/myk-llama models/Supertinyllama-107K-F16.gguf
+./build/myk-llama-simple models/Supertinyllama-107K-F16.gguf
+./build/myk-llama-adv -m models/Supertinyllama-107K-F16.gguf
 
 ```
 
